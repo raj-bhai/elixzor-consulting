@@ -17,7 +17,7 @@ export default function ProgressSection() {
       {isInView && (
         <motion.div
           className="absolute w-[150px] h-[150px] sm:w-[400px] sm:h-[400px] bg-gradient-to-r from-purple to-purple rounded-full z-0 "
-          style={{ opacity: 0.3 }} 
+          style={{ opacity: 0.3 }}
           animate={{
             x: ["-20%", "120%"],
             y: ["0%", "30%", "-20%"],
@@ -40,32 +40,72 @@ export default function ProgressSection() {
         >
           <div className="text-right">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
-              3<sup className="text-sm sm:text-base lg:text-lg align-top">RD</sup>
+              1
+              <sup className="text-sm sm:text-base lg:text-lg align-top">
+                ST
+              </sup>
             </h2>
             <p className="text-lg sm:text-xl mt-2">MONTH</p>
-            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">EXPERT</p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">
+              APPRENTICE
+            </p>
+          </div>
+          <div className="text-right">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
+              2
+              <sup className="text-sm sm:text-base lg:text-lg align-top">
+                ND
+              </sup>
+            </h2>
+            <p className="text-lg sm:text-xl mt-2">MONTH</p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">
+              SKILLED
+            </p>
           </div>
 
           <div className="text-right">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
-              6<sup className="text-sm sm:text-base lg:text-lg align-top">TH</sup>
+              3
+              <sup className="text-sm sm:text-base lg:text-lg align-top">
+                RD
+              </sup>
             </h2>
             <p className="text-lg sm:text-xl mt-2">MONTH</p>
-            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">MASTER</p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">
+              EXPERT
+            </p>
           </div>
 
           <div className="text-right">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
-              12<sup className="text-sm sm:text-base lg:text-lg align-top">TH</sup>
+              6
+              <sup className="text-sm sm:text-base lg:text-lg align-top">
+                TH
+              </sup>
             </h2>
             <p className="text-lg sm:text-xl mt-2">MONTH</p>
-            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">LEGENDARY</p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">
+              MASTER
+            </p>
+          </div>
+
+          <div className="text-right">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
+              12
+              <sup className="text-sm sm:text-base lg:text-lg align-top">
+                TH
+              </sup>
+            </h2>
+            <p className="text-lg sm:text-xl mt-2">MONTH</p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold mt-2">
+              LEGENDARY
+            </p>
           </div>
         </motion.div>
 
         {/* Middle Divider Line with Motion */}
         <motion.div
-          className="flex flex-col items-center relative h-[600px] sm:h-[600px] mx-4 sm:mx-8 w-1/3"
+          className="flex flex-col items-center relative h-[600px] sm:h-[1000px] mx-4 sm:mx-8 w-1/3"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -75,7 +115,7 @@ export default function ProgressSection() {
               src="/images/divider-line.png"
               alt="Divider Line"
               layout="fill"
-              className="sm:object-contain object-cover"
+              className="sm:object-cover object-cover"
             />
           </div>
         </motion.div>
@@ -87,6 +127,34 @@ export default function ProgressSection() {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+          <ul className="space-y-2 text-base sm:text-lg">
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              Complete Set-Up
+            </li>
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              First batch
+            </li>
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              Examining Analytics
+            </li>
+          </ul>
+          <ul className="space-y-2 text-base sm:text-lg">
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              Iteration + improvements
+            </li>
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              First PAY-CHECK
+            </li>
+            <li className="flex items-start">
+              <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
+              Consistent views
+            </li>
+          </ul>
           <ul className="space-y-2 text-base sm:text-lg">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
