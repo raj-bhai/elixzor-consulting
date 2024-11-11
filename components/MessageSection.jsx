@@ -1,13 +1,13 @@
 export default function MessageSection() {
     return (
-      <section className=" p-8 sm:p-12 text-left w-full max-w-3xl mx-auto">
+      <section className="p-0 flex flex-col items-center text-center sm:p-12 text-left w-full mx-auto">
         <p className="text-white text-lg mb-6">Dear aspiring online entrepreneur,</p>
         
         <p className="text-white text-lg mb-4">
           If you want to <strong className="font-semibold">make your first paycheck online with YouTube automation in the next 60 days without putting in the time and efforts</strong>
         </p>
         
-        <p className="text-lg mb-4 bg-yellow-200 p-2 inline-block rounded">
+        <p className="text-lg text-[#000] mb-4 bg-yellow-200 p-2 inline-block rounded">
           Then this will be the most effective and successful service you will ever get.
         </p>
   

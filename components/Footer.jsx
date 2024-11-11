@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center space-y-8 md:space-y-0 mb-8">
           
           {/* Contact Info */}
-          <div className="text-center md:text-left">
+          <div className="text-center sm:max-w-xl md:text-left">
             <h3 className="text-lg font-semibold text-light-purple mb-2">
               Contact Us
             </h3>
@@ -22,7 +22,10 @@ export default function Footer() {
                 paul@elixzorconsulting.com
               </a>
             </p>
-            <p>Address: Mumbai, Maharastra, India</p>
+            <p>Address: Tummy Fillers, Floor no. 2nd, Flat no. B-208, PRABHAKAR
+JANGID ESTATE CHSL, Near Vijay Park, Jangid Estate,
+Mira Road East, Mira Bhayandar, Thane, Maharashtra,
+401107</p>
           </div>
 
           {/* Quick Links */}

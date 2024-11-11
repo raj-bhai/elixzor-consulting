@@ -105,7 +105,7 @@ export default function ProgressSection() {
 
         {/* Middle Divider Line with Motion */}
         <motion.div
-          className="flex flex-col items-center relative h-[600px] sm:h-[1000px] mx-4 sm:mx-8 w-1/3"
+          className="flex flex-col items-center relative h-[800px] sm:h-[1000px] mx-4 sm:mx-8 w-1/3"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
