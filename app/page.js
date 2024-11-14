@@ -6,6 +6,7 @@ import MessageSection from "@/components/MessageSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ResultsSection from "@/components/ResultsSection";
+import Schedule from "@/components/Schedule";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <MessageSection/>
       <FAQSection/>
       <ResultsSection/>
+      <Schedule/>
       <Footer/>
     </main>
   );

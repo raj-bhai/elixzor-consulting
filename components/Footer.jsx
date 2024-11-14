@@ -3,11 +3,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" w-screen bg-gradient-to-r from-purple to-black text-white py-8">
-      <div className="container mx-auto  px-4 md:px-8 lg:px-16">
+    <footer className="w-screen bg-gradient-to-r from-purple to-black text-white py-8 overflow-x-hidden">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Top section with contact info and quick links */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center space-y-8 md:space-y-0 mb-8">
-          
           {/* Contact Info */}
           <div className="text-center sm:max-w-xl md:text-left">
             <h3 className="text-lg font-semibold text-light-purple mb-2">
@@ -22,10 +21,11 @@ export default function Footer() {
                 paul@elixzorconsulting.com
               </a>
             </p>
-            <p>Address: Tummy Fillers, Floor no. 2nd, Flat no. B-208, PRABHAKAR
-JANGID ESTATE CHSL, Near Vijay Park, Jangid Estate,
-Mira Road East, Mira Bhayandar, Thane, Maharashtra,
-401107</p>
+            <p>
+              Address: Tummy Fillers, Floor no. 2nd, Flat no. B-208, PRABHAKAR
+              JANGID ESTATE CHSL, Near Vijay Park, Jangid Estate, Mira Road
+              East, Mira Bhayandar, Thane, Maharashtra, 401107
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -34,6 +34,22 @@ Mira Road East, Mira Bhayandar, Thane, Maharashtra,
               Quick Links
             </h3>
             <ul className="space-y-1">
+              <li>
+                <Link
+                  href="/about"
+                  className="underline hover:text-light-purple transition duration-300"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="underline hover:text-light-purple transition duration-300"
+                >
+                  Contact Us
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/privacy-policy"
@@ -50,6 +66,14 @@ Mira Road East, Mira Bhayandar, Thane, Maharashtra,
                   Terms and Conditions
                 </Link>
               </li>
+              {/* <li>
+                <Link
+                  href="/refund-policy"
+                  className="underline hover:text-light-purple transition duration-300"
+                >
+                  Refund Policy
+                </Link>
+              </li> */}
             </ul>
           </div>
 
