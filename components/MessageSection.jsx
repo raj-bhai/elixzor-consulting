@@ -1,6 +1,6 @@
 export default function MessageSection() {
     return (
-      <section className="p-0 flex flex-col items-center text-center sm:p-12 text-left w-full mx-auto">
+      <section className="p-0 flex flex-col font-sans items-center text-center sm:p-12  text-left w-full mx-auto  ">
         <p className="text-white text-lg mb-6">Dear aspiring online entrepreneur,</p>
         
         <p className="text-white text-lg mb-4">

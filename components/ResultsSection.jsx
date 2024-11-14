@@ -10,7 +10,7 @@ import {
 import CTAButton from "./CTAButton";
 import Image from "next/image";
 
-export default function ResultsSection(props) {
+export default function ResultsSection({ scrollToBookYourCall, hideCTA }) {
   const slides = [
     {
       id: 1,
@@ -244,8 +244,9 @@ export default function ResultsSection(props) {
           transition={{ duration: 1 }}
         >
           {
-            !props.hideCTA &&
+            !hideCTA &&
             <CTAButton
+            onClick={scrollToBookYourCall}
             text="YES! I WANT TO START"
             subtext="Limited seats available, so book your slot before they run out."
           />

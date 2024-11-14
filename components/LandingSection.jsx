@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import CTAButton from "./CTAButton";
 import Image from "next/image";
 
-export default function LandingSection() {
+export default function LandingSection({ scrollToBookYourCall }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [maxProximity, setMaxProximity] = useState(20);
 
@@ -92,6 +92,7 @@ export default function LandingSection() {
       {/* Call to Action Button */}
       <div className="relative z-10 mt-8 sm:mt-6">
         <CTAButton
+        onClick={scrollToBookYourCall}
           text="YES! I WANT TO START"
           subtext="Limited seats available, so book your slot before they run out."
         />

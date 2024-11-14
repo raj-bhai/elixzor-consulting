@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import useInView from "./useInView";
 import { FaArrowRight } from "react-icons/fa";
 
-export default function ProgressSection() {
+export default function ProgressSection({ scrollToBookYourCall }) {
   const [ref, isInView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
     <section
       ref={ref}
-      className="relative w-screen bg-black text-white py-16 px-4 flex flex-col items-center overflow-hidden"
+      className="relative w-full bg-black text-white py-16 sm:px-4 flex flex-col items-center overflow-hidden"
     >
       {isInView && (
         <motion.div
@@ -30,15 +30,15 @@ export default function ProgressSection() {
         />
       )}
 
-      <div className="sm:w-[700px] w-full mx-auto flex flex-row items-center justify-center z-10 relative">
+      <div className="sm:w-[700px] h-full  w-full mx-auto flex flex-row items-center justify-center z-10 relative">
         {/* Left Section */}
         <motion.div
-          className="flex flex-col items-end space-y-32 sm:space-y-16 w-1/3"
+          className="flex flex-col px-4 sm:px-0  space-y-12 sm:space-y-16 w-1/2 sm:w-1/3 "
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="text-right">
+          <div className="text-right h-40 w-full flex flex-col items-start sm:items-end ">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
               1
               <sup className="text-sm sm:text-base lg:text-lg align-top">
@@ -50,7 +50,7 @@ export default function ProgressSection() {
               APPRENTICE
             </p>
           </div>
-          <div className="text-right">
+          <div className="text-right h-40 w-full flex flex-col items-start sm:items-end ">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
               2
               <sup className="text-sm sm:text-base lg:text-lg align-top">
@@ -63,7 +63,7 @@ export default function ProgressSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-right h-40 w-full flex flex-col items-start sm:items-end ">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
               3
               <sup className="text-sm sm:text-base lg:text-lg align-top">
@@ -76,7 +76,7 @@ export default function ProgressSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-right h-40 w-full flex flex-col items-start sm:items-end ">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
               6
               <sup className="text-sm sm:text-base lg:text-lg align-top">
@@ -89,7 +89,7 @@ export default function ProgressSection() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="text-right h-40 w-full flex flex-col items-start sm:items-end ">
             <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#7E3A27]">
               12
               <sup className="text-sm sm:text-base lg:text-lg align-top">
@@ -105,7 +105,7 @@ export default function ProgressSection() {
 
         {/* Middle Divider Line with Motion */}
         <motion.div
-          className="flex flex-col items-center relative h-[800px] sm:h-[1000px] mx-4 sm:mx-8 w-1/3"
+          className="flex flex-col items-center relative sm:visible invisible h-[700px] sm:h-[1000px] mx-2 sm:mx-8 sm:w-1/3"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -122,12 +122,12 @@ export default function ProgressSection() {
 
         {/* Right Section */}
         <motion.div
-          className="flex flex-col items-start space-y-8 sm:space-y-16 w-1/3"
+          className="flex flex-col  space-y-12   w-1/2  sm:w-1/3"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <ul className="space-y-2 text-base sm:text-lg">
+          <ul className="space-y-2 h-40 w-full text-base sm:text-lg   ">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
               Complete Set-Up
@@ -141,7 +141,7 @@ export default function ProgressSection() {
               Examining Analytics
             </li>
           </ul>
-          <ul className="space-y-2 text-base sm:text-lg">
+          <ul className="space-y-2 h-40 w-full  text-base sm:text-lg ">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
               Iteration + improvements
@@ -155,7 +155,7 @@ export default function ProgressSection() {
               Consistent views
             </li>
           </ul>
-          <ul className="space-y-2 text-base sm:text-lg">
+          <ul className="space-y-2 h-40 w-full  text-base sm:text-lg">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
               Engaging Audience
@@ -170,7 +170,7 @@ export default function ProgressSection() {
             </li>
           </ul>
 
-          <ul className="space-y-2 text-base sm:text-lg">
+          <ul className="space-y-2 h-40 w-full text-base sm:text-lg">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
               Plans for diversifying
@@ -185,7 +185,7 @@ export default function ProgressSection() {
             </li>
           </ul>
 
-          <ul className="space-y-2 text-base sm:text-lg">
+          <ul className="space-y-2 h-40 w-full text-base sm:text-lg">
             <li className="flex items-start">
               <FaArrowRight className="mt-1 text-xl text-purple-500 mr-2" />
               Business
@@ -209,6 +209,7 @@ export default function ProgressSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <CTAButton
+        onClick={scrollToBookYourCall}
           text="YES! I WANT TO START"
           subtext="Limited seats available, so book your slot before they run out."
         />

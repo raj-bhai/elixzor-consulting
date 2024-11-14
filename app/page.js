@@ -1,3 +1,5 @@
+"use client"; // Ensure this is a client component
+import React, {useRef} from 'react';
 import Header from "@/components/Header";
 import LandingSection from "@/components/LandingSection";
 import ObjectiveSection from "@/components/ObjectiveSection";
@@ -9,16 +11,28 @@ import ResultsSection from "@/components/ResultsSection";
 import Schedule from "@/components/Schedule";
 
 export default function Home() {
+
+  const bookCallRef = useRef(null); // Create a reference for the BookYourCall component
+
+  const scrollToBookYourCall = () => {
+    // Smooth scroll to BookYourCall section
+    if (bookCallRef.current) {
+      bookCallRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <main className="flex bg-black overflow-x-hidden min-h-screen flex-col items-center justify-between px-24 pt-[80px]">
+    <main className="flex bg-black overflow-x-hidden min-h-screen flex-col items-center justify-between px-4 sm:px-24 pt-[80px]">
       <Header />
-      <LandingSection />
-      <ObjectiveSection/>
-      <ProgressSection/>
-      <MessageSection/>
-      <FAQSection/>
-      <ResultsSection/>
+      <LandingSection scrollToBookYourCall={scrollToBookYourCall} />
+      <ObjectiveSection scrollToBookYourCall={scrollToBookYourCall} />
+      <ProgressSection scrollToBookYourCall={scrollToBookYourCall} />
+      <MessageSection />
+      <ResultsSection scrollToBookYourCall={scrollToBookYourCall} />
+      <div ref={bookCallRef} >
       <Schedule/>
+      </div>
+      <FAQSection />
       <Footer/>
     </main>
   );

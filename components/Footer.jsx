@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Top section with contact info and quick links */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-center space-y-8 md:space-y-0 mb-8">
           {/* Contact Info */}
-          <div className="text-center sm:max-w-xl md:text-left">
+          <div className="text-center sm:max-w-xl md:text-left text-light-purple">
             <h3 className="text-lg font-semibold text-light-purple mb-2">
               Contact Us
             </h3>

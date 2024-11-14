@@ -3,7 +3,7 @@
 import CTAButton from "./CTAButton";
 import useInView from "./useInView";
 
-export default function ObjectiveSection() {
+export default function ObjectiveSection({ scrollToBookYourCall }) {
   const [subheadingRef, subheadingInView] = useInView({ threshold: 0.1 });
   const [headingRef, headingInView] = useInView({ threshold: 0.1 });
   const [descriptionRef, descriptionInView] = useInView({ threshold: 0.1 });
@@ -66,7 +66,7 @@ export default function ObjectiveSection() {
         </ul>
 
         {/* Call to Action Button */}
-        <CTAButton text="YES! I WANT TO START" subtext="Limited seats available, so book your slot before they run out." />
+        <CTAButton onClick={scrollToBookYourCall} text="YES! I WANT TO START" subtext="Limited seats available, so book your slot before they run out." />
       </div>
     </section>
   );
