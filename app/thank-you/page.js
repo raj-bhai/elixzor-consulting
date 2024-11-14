@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ResultsSection from '../components/ResultsSection';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ResultsSection from '@/components/ResultsSection';
 
 export default function ThankYouPage() {
   return (
