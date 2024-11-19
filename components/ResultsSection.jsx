@@ -233,6 +233,8 @@ export default function ResultsSection({ scrollToBookYourCall, hideCTA }) {
           </button>
         </motion.div>
 
+      {/* <Gallery/> */}
+
         {/* Call to Action Button */}
         <motion.div
           initial="hidden"

@@ -9,6 +9,7 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import ResultsSection from "@/components/ResultsSection";
 import Schedule from "@/components/Schedule";
+import Gallery from '@/components/Gallery';
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
       <ProgressSection scrollToBookYourCall={scrollToBookYourCall} />
       <MessageSection />
       <ResultsSection scrollToBookYourCall={scrollToBookYourCall} />
+      <Gallery scrollToBookYourCall={scrollToBookYourCall} />
       <div ref={bookCallRef} >
       <Schedule/>
       </div>

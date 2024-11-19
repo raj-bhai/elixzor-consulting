@@ -15,7 +15,7 @@ export default function Schedule() {
   }, []);
 
   return (
-    <section className=" font-sans relative md:w-full w-screen bg-black text-white py-16 px-4 flex flex-col items-center overflow-hidden">
+    <section className=" font-sans relative w-screen bg-black text-white py-16 px-4 flex flex-col items-center overflow-hidden">
       <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider leading-tight text-light-purple mb-8">
         Schedule a Session
       </h2>
