@@ -18,6 +18,75 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const isMaintenanceMode = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === "true";
+
+  if (isMaintenanceMode) {
+    return (
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+              backgroundColor: "#f8f9fa",
+              textAlign: "center",
+              padding: "20px",
+            }}
+          >
+            <div
+              style={{
+                maxWidth: "600px",
+                borderRadius: "10px",
+                backgroundColor: "#ffffff",
+                padding: "30px",
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              <h1
+                style={{
+                  color: "#343a40",
+                  fontSize: "2rem",
+                  marginBottom: "10px",
+                }}
+              >
+                Website Temporarily Unavailable
+              </h1>
+              <p
+                style={{
+                  color: "#6c757d",
+                  fontSize: "1.1rem",
+                  marginBottom: "20px",
+                }}
+              >
+                This website will be restored once the payment is processed.
+                Please contact the developer for more information.
+              </p>
+              <a
+                href="rajkiranjnv1@gmail.com" // Replace with your email
+                style={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "#007bff",
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  borderRadius: "5px",
+                  fontSize: "1rem",
+                }}
+              >
+                Contact Developer
+              </a>
+            </div>
+          </div>
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="en">
       <head>
