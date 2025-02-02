@@ -27,14 +27,14 @@ export default function Home() {
       <Header />
       <LandingSection scrollToBookYourCall={scrollToBookYourCall} />
       <ObjectiveSection scrollToBookYourCall={scrollToBookYourCall} />
-      <ProgressSection scrollToBookYourCall={scrollToBookYourCall} />
+      {/* <ProgressSection scrollToBookYourCall={scrollToBookYourCall} /> */}
       <MessageSection />
       <ResultsSection scrollToBookYourCall={scrollToBookYourCall} />
       <Gallery scrollToBookYourCall={scrollToBookYourCall} />
       <div ref={bookCallRef} >
       <Schedule/>
       </div>
-      <FAQSection />
+      {/* <FAQSection /> */}
       <Footer/>
     </main>
   );
