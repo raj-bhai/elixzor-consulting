@@ -80,7 +80,7 @@ export default function LandingSection({ scrollToBookYourCall }) {
         <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl h-[200px] sm:h-[300px] md:h-[350px] lg:h-[380px] bg-[#000] rounded-lg shadow-xl overflow-hidden">
         <iframe
             className="w-full h-full object-cover"
-            src="https://www.youtube.com/embed/8SPJ839PCB4?controls=0&rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/95JHGYaTnSs?controls=0&rel=0&modestbranding=1"
             title="YouTube video player"
             // frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
